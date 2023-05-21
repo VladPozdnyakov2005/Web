@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Бронирование</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="../media/logo.png" class="test-0-logo"></a>
+		<div class="name">FlightPool</div>
+		<div id="bm">
+			<div class="navigation"><a href="index.html #2"><p class="navigation1">Акции</p></div>
+				<div class="navigation"><a href="index.html #1"><p class="navigation1">Поиск</p></a></div>
+				<div class="navigation"><a href="login.html"><p class="navigation1">Личный кабинет</p></a></div>
+			</div>
+		</header>
+		<h1 class="search-h1">Бронирование</h1>
+		<div class="booking-border">
+			<h1 class="booking-base">Данные бронирования:</h1>
+			<div class="test-5-fc">Номер рейса: 415234</div>
+			<div class="test-5-fcity">Город вылета: Москва</div>
+			<div class="test-5-from">Названия аэропорта вылета: Домодедово</div>
+			<div class="test-5-dd">Дата вылета: 08.06.2023</div>
+			<div class="test-5-dt">Вылет: 6:45</div>
+			<div class="test-5-tcity">Город назначения: Сочи</div>
+			<div class="test-5-to">Аэропорт назначения: Адлер</div>
+			<div class="test-5-at">Прилёт: 10:30</div>
+			<div class="test-5-fp">Стоимость на одного пассажира: 6 130 ₽</div>
+			<hr>
+			<h1 class="booking-base">Данные пассажира:</h1>
+			<div class="booking-text">Имя</div>
+			<form action="index.html">
+			<input class="test-5-name" type="text" required="required" placeholder="Имя">
+			<div class="booking-text">Фамилия</div>
+			<input class="test-5-last " type="text" required="required" placeholder="Фамилия">
+			<div class="booking-text">Дата рождения</div>
+			<input class="test-5-dob" type="date" required="required" placeholder="Фамилия">
+			<div class="booking-text">Номер документа</div>
+			<input class="test-5-doc" type="text" required="required" placeholder="Номер документа">
+			<form onsubmit="return false;">
+				<div class="booking-text">Количество пассажиров</div>
+				<input class="test-5-price" id="number" type="number" min="1" max="8" value="1" oninput="calculator()"> 
+				<br><br>
+				<div class="booking-text-2">Финальная стоимость</div><output class="booking-text-3" id="result">6130</output><div class="booking-text-4">₽</div>
+				<script type="text/javascript">
+					function calculator(){
+						var rezultat2 = 6130;
+						rezultat2 *= parseFloat(document.getElementById('number').value);
+						document.getElementById('result').innerHTML = rezultat2;
+					}
+				</script>
+				<br><br>
+
+				<button class="test-5-book">Забронировать</button>
+			</form>
+			</form>
+		</div>
+	</div>
+	<footer class="footer-reg">
+		<div class="footer-container">
+			<div class="footer-block">
+				<a href="index.html">
+					<img src="../media/logo.png" class="footer-logo">
+				</a>
+				<nav class="footer-nav">
+					<a href="index.html" class="footer-link">Главная</a>
+					<a href="login.html" class="footer-link">Войти</a>
+					<a href="index.html #Subscribe" class="footer-link">Отзывы</a>
+					<a href="#" class="footer-link">Контакты</a>
+				</nav>
+				<div class="test-0-phone">
+					8 (800) 100-10-10
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

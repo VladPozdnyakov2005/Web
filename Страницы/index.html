@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlightPool</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="../bxslider/dist/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../bxslider/dist/jquery.bxslider.min.js"></script>
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="../media/logo.png" class="test-0-logo"></a>
+		<div class="name">FlightPool</div>
+		<div id="bm">
+			<div class="navigation"><a href="#2"><p class="navigation1">Акции</p></a></div>
+			<div class="navigation"><a href="#1"><p class="navigation1">Поиск</p></a></div>
+			<div class="navigation"><a href="login.html"><p class="navigation1">Личный кабинет</p></a></div>
+		</div>
+	</header>
+	<div class="slider">
+		<ul class="bxslider">
+			<li><img src="../media/images/slider1.jpg"></li>
+			<li><img src="../media/images/slider2.jpg"></li>
+			<li><img src="../media/images/slider3.jpg"></li>
+			<li><img src="../media/images/slider4.jpg"></li>
+			<li><img src="../media/images/slider5.jpg"></li>
+		</ul>
+	</div>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.bxslider').bxSlider({
+				autoStart: true,
+				auto: true,
+				pause: 4000,
+				autoDirection: 'next',
+				autoHover: true
+			});
+		});
+	</script>
+	<h1 class="search-h1">Основные принципы накопления бронирований</h1>
+	<div class="principles">
+		1.	Выбрать удобную дату перелета.
+		<br>
+		2.	Накопить больше 50% бронирований на рейс.
+		<br>
+		3.	Получить снижение стоимости.
+	</div>
+	<h1 class="search-h1">Начать путешествие</h1>
+	<form id = "1" class="search" action="search.html">
+		<div class="search-text">Заполните поля для поиска подходящего рейса</div>
+		<div class="eyeliner">Откуда:
+			<select class="test-0-fd" required="required">
+				<option></option>
+				<option>Москва</option>
+				<option>Санкт-Петербург</option>
+				<option>Екатеринбург</option>
+				<option>Севастополь</option>
+			</select>
+		</div>
+		<br>
+		<div class="eyeliner">Куда:
+			<select class="test-0-fa" required="required">
+				<option></option>
+				<option>Рязань</option>
+				<option>Краснодар</option>
+				<option>Сочи</option>
+				<option>Самара</option>
+			</select>
+		</div>
+		<br>
+		<div class="eyeliner">Туда:
+			<input class="test-0-fdt-" type="date" required="required">
+		</div>
+		<br>
+		<div class="eyeliner">Обратно:
+			<input class="test-0-fat" type="date" required="required">
+		</div>
+		<br>
+		<div class="eyeliner">Количество человек:
+			<input class="test-0-fnp" type="number" min="1" max="8" required="required">
+		</div>
+	</br>
+	<input id="poisk" class="test-0-fbs" type="submit" name="Отправить" value="Поиск рейсов" required="required"></form>
+<h1 id="2" class="search-h1">Актуальные акции</h1>
+<div class="Promo">
+	<div class="test-0-an">Возврат и замена Ваших билетов</div>
+	<img src="..\media\images\promotions\promotion1.jpg" class="test-0-ai">
+	<div class="test-0-ad">Пандемия изменила планы многих путешественников, но мы знаем, что это не будет длиться вечно. 
+		Как только все это закончится, мы продолжим исследовать этот мир так, как привыкли. 
+		Специальные правила, разработанные для этой сложной ситуации, помогут вам отменить свою поездку
+	или отложить ее на более поздний срок.</div>
+	<button class="test-0-abm">Открыть</button>
+</div>
+<br>
+<br>
+<div class="Promo">
+	<div class="test-0-an">Лучшие предложения</div>
+	<img src="..\media\images\promotions\promotion2.jpg" class="test-0-ai">
+	<div class="test-0-ad">Снова увидеть улицы, которые были свидетелями столького. Обнять своих любимых и оглянуться назад, чтобы увидеть
+		, через что вы прошли. И думать о новых мечтах, которые будут такими особенными!
+	</div>
+	<button class="test-0-abm">Открыть</button>
+</div>
+<br>
+<br>
+<div class="Promo">
+	<div class="test-0-an">Увидимся почаще</div>
+	<img src="..\media\images\promotions\promotion3.jpg" class="test-0-ai">
+	<div class="test-0-ad">С начала января мы расширяем географию полетов по России, чтобы вы могли
+	чаще видеться со своими близкими. Выберите нашу компанию, чтобы лететь туда, где вас всегда ждут.</div>
+	<button class="test-0-abm">Открыть</button>
+</div>
+<br>
+<br>
+<div class="Promo">
+	<div class="test-0-an">Все снова включилось</div>
+	<img src="..\media\images\promotions\promotion4.jpg" class="test-0-ai">
+	<div class="test-0-ad">С 10 августа мы возобновим полеты в Турцию. Рейсы из Москвы в Анталию будут выполняться ежедневно два раза
+		в день, а рейсы по маршруту Москва-Даламан будут выполняться от трех до семи раз в неделю.
+	</div>
+	<button class="test-0-abm">Открыть</button>
+</div>
+<h1 class="search-h1">Подписка на закрытые акции</h1>
+<form class="lockpromo">
+	<div class="search-text">Введите email для подписки на закрытые акции</div>
+	<input class="test-0-sie " type="email" placeholder="Ваш email" required="required">	
+	<br>
+	<br>
+	<a href="#Subscribe">
+		<input id="Subscribe" class="test-0-sbs" type="submit" name="Отправить" value="Подписаться" required="required">
+	</a>
+</form>
+<a href="#Subscribe"><h1 class="search-h1">Отзывы</h1></a>
+<div class="reviews">
+	<div class="left-review">
+		<div class="feedback">
+			<img src="..\media\images\otziv6.jpg" class="review-photo">
+			<div class="feedback-name">Елисей Елисеев</div>
+			<div class="comment">Поездка прошла отлично!</div>
+		</div>
+		<div class="feedback">
+			<img src="..\media\images\otziv5.jpg" class="review-photo">
+			<div class="feedback-name">Данила Городничеч</div>
+			<div class="comment">Хорошие сотрудники, комфортная обстановка!</div>
+		</div>
+		<div class="feedback">
+			<img src="..\media\images\otziv2.jpg" class="review-photo">
+			<div class="feedback-name">Владислав Махеев</div>
+			<div class="comment">Дешёвые комфортые перелёты, класс!!!</div>
+		</div>
+	</div>
+	<div class="right-review">
+		<div class="feedback">
+			<img src="..\media\images\otziv3.jpg" class="review-photo">
+			<div class="feedback-name">Антон</div>
+			<div class="comment">Забронировать билет быстро и легко</div>
+		</div>
+		<div class="feedback">
+			<img src="..\media\images\otziv1.jpg" class="review-photo">
+			<div class="feedback-name">Max2006</div>
+			<div class="comment">Я проспал весь полёт</div>
+		</div>
+		<div class="feedback">
+			<img src="..\media\images\otziv4.jpg" class="review-photo">
+			<div class="feedback-name">Victor</div>
+			<div class="comment">Всё быстро и доступно! Обслуживание на лучшем уровне!</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-index">
+	<div class="footer-container">
+		<div class="footer-block">
+			<a href="index.html">
+				<img src="../media/logo.png" class="footer-logo">
+			</a>
+			<nav class="footer-nav">
+				<a href="index.html" class="footer-link">Главная</a>
+				<a href="login.html" class="footer-link">Войти</a>
+				<a href="#Subscribe" class="footer-link">Отзывы</a>
+				<a href="#" class="footer-link">Контакты</a>
+			</nav>
+			<div class="test-0-phone">
+				8 (800) 100-10-10
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

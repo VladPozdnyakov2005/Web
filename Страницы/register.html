@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="../media/logo.png" class="test-0-logo"></a>
+		<div class="name">FlightPool</div>
+		<div id="bm">
+			<div class="navigation"><a href="index.html #2"><p class="navigation1">Акции</p></div>
+				<div class="navigation"><a href="index.html #1"><p class="navigation1">Поиск</p></a></div>
+				<div class="navigation"><a href="login.html"><p class="navigation1">Личный кабинет</p></a></div>
+			</div>
+		</header>
+		<form id="reg-form">
+			<div class="registerborder">
+				<img src="../media/logo.png" class="login-logo">
+				<div>Регистрация</div>
+				<div class="login-text">Имя</div>
+				<input class="test-2-name" type="text" required="required" placeholder="Имя">
+				<div class="login-text">Фамилия</div>
+				<input class="test-2-last" type="text" required="required" placeholder="Фамилия">
+				<div class="login-text">Номер документа</div>
+				<input class="test-2-last" type="text" required="required" placeholder="Номер документа">
+				<div class="login-text">Номер телефона</div>
+				<input class="test-2-phone" type="text" required="required" placeholder="8 (XXX) XXX XX XX">
+				<div class="login-text">Пароль</div>
+				<input class="test-2-pass" id="pass" type="password" required="required" placeholder="Пароль">
+				<div class="login-text">Повторите пароль</div>
+				<input class="test-2-pass2" id="pass2" type="password" required="required" placeholder="Повторите пароль">
+				<div class="reginfo">
+					Есть профиль?
+					<a href="login.html"><div class="reginfo-2">Войдите</div></a>
+				</div>
+				
+				<input class="test-2-btn" type="submit" name="Регистрация" value="Регистрация" required="required">
+			</div>
+		</form>
+		<script type="text/javascript">
+			document.getElementById('reg-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				var password = document.getElementById("pass").value;
+				var repeatPassword = document.getElementById('pass2').value;
+				if (password.length < 7 || (!/[*]/.test(password) && (!/[!]/.test(password) && (!/[$]/.test(password))))) {
+					alert('Пароль должен содержать не менее 7 символов и !,, $');
+				} else if (password != repeatPassword) {
+					alert('Пароли не совпадают');
+				} 
+				else if (!/[0-9]/.test(password)) {
+					alert("Пароль должен содержать хотя бы 1 цифру");
+				}
+				else if(!/[*!$]/.test(password)){
+					alert("Пароль должен содержать один из этих символов !,*,$")
+				}
+				else {
+					window.location.href = 'login.html';
+				}
+			});
+		</script>
+		<footer class="footer-reg">
+			<div class="footer-container">
+				<div class="footer-block">
+					<a href="index.html">
+						<img src="../media/logo.png" class="footer-logo">
+					</a>
+					<nav class="footer-nav">
+						<a href="index.html" class="footer-link">Главная</a>
+						<a href="login.html" class="footer-link">Войти</a>
+						<a href="index.html #Subscribe" class="footer-link">Отзывы</a>
+						<a href="#" class="footer-link">Контакты</a>
+					</nav>
+					<div class="test-0-phone">
+						8 (800) 100-10-10
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	</html>

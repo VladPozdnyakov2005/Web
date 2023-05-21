@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вход</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="../media/logo.png" class="test-0-logo"></a>
+		<div class="name">FlightPool</div>
+		<div id="bm">
+			<div class="navigation"><a href="index.html #2"><p class="navigation1">Акции</p></div>
+				<div class="navigation"><a href="index.html #1"><p class="navigation1">Поиск</p></a></div>
+				<div class="navigation"><a href="login.html"><p class="navigation1">Личный кабинет</p></a></div>
+			</div>
+		</header>
+		<form> 
+			<div class="loginborder">
+				<img src="../media/logo.png" class="login-logo">
+				<div>Войти</div>
+				<div class="login-text">Номер телефона</div>
+				<input class="test-1-fpn" name="login" type="text" required="required" placeholder="8 (XXX) XXX XX XX">
+				<div class="login-text">Пароль</div>
+				<input class="test-1-fps" name="password" type="password" required="required">
+				<div class="logininfo">
+					Нет профиля? 
+					<a href="register.html"><div class="logininfo-2">Зарегестрируйтесь!</div></a>
+				</div>
+				<br><br>
+				<a href="profile.html"><input class="test-1-fbs" type="submit" name="Войти" value="Войти" required="required"></a>
+			</div>
+		</form>
+		<footer class="footer-login">
+			<div class="footer-container">
+				<div class="footer-block">
+					<a href="index.html">
+						<img src="../media/logo.png" class="footer-logo">
+					</a>
+					<nav class="footer-nav">
+						<a href="index.html" class="footer-link">Главная</a>
+						<a href="login.html" class="footer-link">Войти</a>
+						<a href="index.html #Subscribe" class="footer-link">Отзывы</a>
+						<a href="#" class="footer-link">Контакты</a>
+					</nav>
+					<div class="test-0-phone">
+						8 (800) 100-10-10
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			const form = document.querySelector("form");
+			const inputs = form.elements;
+			const registeredUsers = [
+				["89991234567", "password12*"]];
+			function isValid(username, password) {   
+				for(var i = 0; i < registeredUsers.length; i++) {
+					var temp = registeredUsers[i];
+					if (temp[0] == username) {
+						var currentPair = temp;
+						break;        
+					}        
+				}     
+				if (currentPair && currentPair[1] == password) {
+					return true;           
+				} 
+				else {
+					return false;
+				}
+			}
+			form.addEventListener('submit', function(e){
+				e.preventDefault();
+				var username = inputs["login"].value;
+				var password = inputs["password"].value;  
+				if (!isValid(username, password)){        
+					alert('Неверный логин или пароль');
+				} else {      
+					window.location.href = 'profile.html';
+				}
+			});
+		</script>
+	</body>
+	</html>
